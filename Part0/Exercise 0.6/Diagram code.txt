@@ -1,0 +1,14 @@
+title The user creates a new note using the SPA page
+
+User -> Browser: Writes text in the input-field and pushes the submit button
+note over Browser : Browser executes the form.onsubmit-function
+alt OnSubmit()
+note over Browser : Prevents the default functionality of the submit
+note over Browser : Grabs the text from the input field
+note over Browser : Pushes the text to the notes-array
+note over Browser : Empties the text-field
+note over Browser : Runs the redrawNotes-function to redraw the list
+note over Browser : Runs the sendToServer-function to send the text to the server
+end
+Browser -> Server: HTTP Post request to "/new_note_spa" with the text as data of the request
+Server --> Browser: JSON Response: {"message":"note created"}

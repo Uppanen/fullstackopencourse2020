@@ -1,0 +1,18 @@
+title  The user creates a new note
+
+Browser -> Server : HTTP GET "/spa"
+Server --> Browser : HTML-code
+Browser -> Server : HTTP GET "/main.css"
+Server --> Browser : main.css
+Browser -> Server : HTTP GET "/spa.js"
+Server --> Browser : spa.js
+note over Browser:
+Browser starts executing the SPA js-code
+that requests JSON data from the Server 
+end note
+Browser -> Server : HTTP GET "/data.json"
+Server --> Browser : data.json
+note over Browser :
+Browser executes redrawNotes-function 
+which redraws the ul-element
+end note over

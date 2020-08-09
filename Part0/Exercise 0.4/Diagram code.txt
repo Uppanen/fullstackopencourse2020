@@ -1,0 +1,14 @@
+title  The user creates a new note
+
+User -> Browser: Writes text in the input-field and pushes the submit button
+note over Browser : Browser checks for the action-property and method-property on the form-tag
+Browser -> Server: HTTP Post request to "/new_note" with the text as Form Data of the request
+Server --> Browser: HTTP 302 Redirect to "/notes" response 
+Browser -> Server: HTTP GET "/notes"
+Server --> Browser: HTML-CODE
+Browser -> Server: HTTP GET "/main.css"
+Server --> Browser: main.css
+Browser -> Server: HTTP GET "/main.js"
+Server --> Browser: main.js
+Browser -> Server: HTTP GET "/data.json"
+Server --> Browser: data.json
